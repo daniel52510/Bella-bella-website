@@ -1,0 +1,23 @@
+[debug] [2023-12-22T21:10:45.755Z] ----------------------------------------------------------------------
+[debug] [2023-12-22T21:10:45.759Z] Command:       /usr/local/bin/node /Users/danielblazquez/node_modules/.bin/firebase functions:shell
+[debug] [2023-12-22T21:10:45.759Z] CLI Version:   12.7.0
+[debug] [2023-12-22T21:10:45.759Z] Platform:      darwin
+[debug] [2023-12-22T21:10:45.760Z] Node Version:  v20.9.0
+[debug] [2023-12-22T21:10:45.760Z] Time:          Fri Dec 22 2023 16:10:45 GMT-0500 (Eastern Standard Time)
+[debug] [2023-12-22T21:10:45.760Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-22T21:10:45.845Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-22T21:10:45.846Z] > authorizing via signed-in user (danielblazquez640@gmail.com)
+[debug] [2023-12-22T21:10:45.846Z] [iam] checking project bella-bella-realty-website for permissions ["firebase.projects.get"]
+[debug] [2023-12-22T21:10:45.850Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bella-bella-realty-website:testIamPermissions [none]
+[debug] [2023-12-22T21:10:45.850Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bella-bella-realty-website:testIamPermissions x-goog-quota-user=projects/bella-bella-realty-website
+[debug] [2023-12-22T21:10:45.850Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bella-bella-realty-website:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-22T21:10:46.176Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bella-bella-realty-website:testIamPermissions 200
+[debug] [2023-12-22T21:10:46.177Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bella-bella-realty-website:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-12-22T21:10:46.435Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-12-22T21:10:46.437Z] defaultcredentials: writing to file /Users/danielblazquez/.config/firebase/danielblazquez640_gmail_com_application_default_credentials.json
+[debug] [2023-12-22T21:10:46.440Z] DEBUG: Setting GAC to /Users/danielblazquez/.config/firebase/danielblazquez640_gmail_com_application_default_credentials.json
+[debug] [2023-12-22T21:10:46.440Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bella-bella-realty-website/adminSdkConfig [none]
+[debug] [2023-12-22T21:10:46.885Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bella-bella-realty-website/adminSdkConfig 200
+[debug] [2023-12-22T21:10:46.885Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bella-bella-realty-website/adminSdkConfig {"projectId":"bella-bella-realty-website","databaseURL":"https://bella-bella-realty-website-default-rtdb.firebaseio.com","storageBucket":"bella-bella-realty-website.appspot.com","locationId":"us-central"}
+[debug] [2023-12-22T21:10:46.902Z] [functions] Watching "/Users/danielblazquez/Desktop/bella-bella-website/bella-bella-website/functions" for Cloud Functions...

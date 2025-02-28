@@ -1,38 +1,703 @@
+html {
+  height: -webkit-fill-available;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #202020;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  flex: 1;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+/* NavBar Properties */
+.navbar {
+  background-color: #080808; /* Dark grey background color */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+.menu {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem; 
+ }
+ .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar ul.open {
+  display: flex;
+}
+.navbar-item {
+  margin: 0 20px;
+  transition: all 0.3s; 
+  white-space: nowrap;
+}
+.navbar-link {
+  text-decoration: none;
+  color: #fff; 
+  font-weight: bold;
+  transition: color 0.3s; 
+  padding: 10px 20px;
+}
+.navbar-link:hover {
+  color: #8b9b50; 
+}
+.navbar-logo {
+  width: 45%;
+  height: 100%;
+  min-width: 300px;
+}
+.social-img {
+  width: 3rem;
+  margin-left: -75px;
+}
+.social-links-container {
+  display: block;
+  margin: 5px 0;
+  padding-left: 20px;
+}
+/* HomePage Properties */
+.recent-props {
+  background-color:#202020;
+  color: white;
+  z-index: 2;
+}
+.background-video {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.HomePage {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+.miami-pic {
+display: none;
+}
+.home-header {
+color: white;
+font-size: 3vw;
+z-index: 2;
+}
+.button-home {
+background-color: #8b9b50;
+color: white;
+padding: 1vw 3vw;
+font-size: 1vw;
+margin-right: 10px;
+position: relative;
+z-index: 2;
+}
+.button-home:hover {
+background-color: white;
+transition: all 0.5s;
+color: hwb(73 31% 39%);
+}
+.button-container {
+margin: 5%;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* About Us Page Properties */
+.about-container {
+  background-color: #8b9b50;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+}
+.about-info {
+  margin: 1%;
+  border: 15px solid #080808;
+  background-color: #080808;
+  color:#fff;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edwin-portrait {
+  border: 10px solid #080808;
+  width: 30%;
+  height: 15%;
+}
+.RRtitle-h2 {
+  text-align: center;
+  font-size: 3vw;
+  margin: 0;
+}
+.RRtitle-h3 {
+  text-align: center;
+  font-style: italic;
+}
+.edwin-bio {
+  font-size: 1.5vw;
+}
+.aboutus-contact {
+  background-color: #8b9b50;
+  color: white;
+  padding: 1vw 3vw;
+  font-size: 1vw;
+}
+.aboutus-contact:hover {
+  background-color: white;
+  transition: all 0.5s;
+  color: hwb(73 31% 39%);
+}
+/* Footer Properties */
+.footer {
+  background-color: #080808;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.bb-container {
+padding-left: 10%;
+}
+.footer p {
+  color: whitesmoke;
+}
+.gen-info {
+  font-size: 1vw;
+}
+.footer-link {
+  color:#fff;
+  text-decoration: none;
+  list-style: none;
+}
+.footer-link:hover {
+  transition: all 0.3s;
+  color:#8b9b50;
+}
+.quick-links {
+  font-size: 1vw;
+  list-style: none;
+}
+.quick-links li {
+  padding-bottom: 8%;
+}
+/* Contact Us Properties */
+.form-container {
+  max-width: 50%; 
+  height: auto;
+}
+.input-container {
+  margin-bottom: 1%;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#user_subject,
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+button {
+  align-self: center;
+  background-color: #8b9b50; /* Change the color as needed */
+  color: #fff;
+  padding: 5%;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+button:hover {
+  background-color: white;
+transition: all 0.5s;
+color: hwb(73 31% 39%);
+}
+.contact-h1 {
+  color:#8b9b50;
+  text-align: center;
+}
+.contact-h2 {
+  color:#8b9b50;
+  text-align: center;
+}
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2%;
+}
+.contact-info {
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: left;
+  background-color: #202020;
+  width: 50%;
   color: white;
 }
+.phone-icon, .email-icon {
+  width: 5%;
+  height: auto;
+}
+.contact-title h2, h3 {
+  margin: 1%;
+}
+.contact-title h3 {
+  color:#8b9b50
+}
+.phone-num {
+  display: flex;
+  padding-top: 2%;
+  flex-direction: row;
+  justify-content: left;
+}
+.email-add {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#202020;
+  width: 50%;
+  color: white;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.submit-button {
+  margin-top: 5%;
+}
+/* Employee Login Properties */
+.loginElement-container {
+  display: flex;
+  justify-content: center;
+}
+.login-area {
+  color: white;
+  background-color: #080808;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+  padding: 3%;
+  width: 20%;
+}
+.username, .password {
+  margin: 1%;
+  padding: 1%;
+}
+.login-button {
+  padding: 0 5%;
+  margin-bottom: 1%;
+}
+.login-pic {
+  width: 25rem;
+  height: auto;
+}
+/* Employee Settings Screen */
+.settings-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}
+.listing-upload, .listing-delete {
+  display: flex;
+  flex-direction: column;
+  align-items: centers;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.listing-delete {
+  color:#080808;
+}
+.settings-container h3 {
+  color:#fff;
+}
+.setting-header {
+  text-align: center;
+  color: white;
+}
+.delete-emails {
+  color: white;
+  display: grid;
+  place-items: center;
+}
+/* Listing Page Properties */
+.listing-title {
+  color: white;
+  align-self: center;
+}
+.listing-container {
+  background-color: #202020;
+  color: white;
+  display:flex;
+  flex-direction: row;
+}
+.property-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #202020;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 
-.App-link {
-  color: #61dafb;
+  width: 200px; /* Adjust the width based on your design */
+
+  img {
+    width: 100%;
+    max-height: 50%; /* Adjust the height based on your design */
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+  }
+
+  div.content {
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 1.2rem; /* Adjust the font size based on your design */
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem; /* Adjust the font size based on your design */
+    margin-bottom: 1rem;
+  }
+  
+}
+.property-tile:hover {
+  transition: all 0.5s;
+  background-color: #fff;
+  color:#080808;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+  background-color: #202020;
+  color: #fff;
+  padding: 5%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  max-height: 60%;
+  overflow: auto;
+  z-index: 3;
+  /* Center the popup */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+  z-index: 3; /* Ensure the blurred background is below the popup */
+}
+
+
+/* #8b9b50 green color */
+
+@media (max-width: 480px) {
+  .App h1 {
+    font-size: 6vw;
   }
-  to {
-    transform: rotate(360deg);
+  /* NavBar Properties */
+  .menu {
+    display: flex;
+    top: 1rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  .navbar-logo {
+    display: block;
+    max-width: none;
+    margin: 0;
+  }
+  .navbar-item {
+    font-size: 3vw;
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .social-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -20px;
+    margin-top: 0;
+  }
+  /* HomePage Properties */
+  .HomePage {
+    background-image: url('../src/assets/miami-skyline.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .button-home {
+    font-size: 4vw;
+  }
+  .background-video {
+    display: none;
+  }
+  /* Footer Properties */
+  .gen-info {
+    font-size: 2vw;
+  }
+  .footer-link {
+    font-size: 2vw;
+  }
+  .footer {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+  }
+  .quick-links {
+    padding-left: 1%;
+  }
+  .bb-insig {
+    max-width: 80%;
+    height: auto;
+  }
+  .bb-container {
+    padding-left: 10%;
+  }
+  /* About Us Container */
+  .about-container {
+    padding: 5% 2%;
+    display: flex;
+    flex-direction: column; /* Adjust padding for smaller screens */
+  }
+  .edwin-portrait {
+    width: 70%; /* Adjust portrait width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .about-info {
+    margin: 5%; /* Adjust margin for spacing */
+  }
+  .RRtitle-h2 {
+    font-size: 7vw; /* Adjust title font size for smaller screens */
+  }
+  .RRtitle-h3 {
+    font-size: 6vw; /* Adjust subtitle font size for smaller screens */
+  }
+  .edwin-bio {
+    font-size: 5vw; /* Adjust bio font size for smaller screens */
+  }
+  .aboutus-contact {
+    font-size: 4vw; /* Adjust button font size for smaller screens */
+  }
+  /* Contact Us page */
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-title {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+  }
+  .phone-num, .email-add {
+    justify-content: center;
+    align-items: center;
+  }
+  .phone-icon, .email-icon {
+    width: 10%;
+    height: auto;
+  }
+  .contact-form {
+    width: 100%;
+    height: auto;
+  }
+  .submit-button {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  /* NavBar Properties */
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  .menu {
+    display: flex;
+    top: 1rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar-logo {
+    display: block;
+    max-width: none;
+    margin: 0;
+  }
+  .navbar-item {
+    font-size: 2vw;
+    padding: 5px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* HomePage Properties */
+  .HomePage h1 {
+    font-size: 3vw;
+  }
+  .HomePage {
+    background-image: url('../src/assets/miami-skyline.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: -webkit-fill-available;
+    background-size: cover;
+  }
+  .button-home {
+    font-size: 2vw;
+  }
+  .background-video {
+    display: none;
+  }
+  /* Footer Properties */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -20px;
+    margin-top: 0;
+  }
+  .gen-info {
+    margin-left: 5rem;
+    font-size: 1.5vw;
+  }
+  .footer-link {
+    font-size: 1.5vw;
+  }
+  .quick-links {
+    padding: 2vw;
+  }
+  .bb-container {
+    padding-left: 15%;
+  }
+  /* About Us Properties */
+  .about-info {
+    margin: 5%; /* Adjust margin for spacing */
+  }
+  .RRtitle-h2 {
+    font-size: 4vw; /* Adjust title font size for smaller screens */
+  }
+  .RRtitle-h3 {
+    font-size: 3vw; /* Adjust subtitle font size for smaller screens */
+  }
+  .edwin-bio {
+    font-size: 2vw; /* Adjust bio font size for smaller screens */
+  }
+  .aboutus-contact {
+    font-size: 2vw; /* Adjust button font size for smaller screens */
   }
 }

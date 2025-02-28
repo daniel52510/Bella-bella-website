@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "bella-bella-realty-website"
+  },
+  "targets": {},
+  "etags": {
+    "bella-bella-realty-website": {
+      "extensionInstances": {
+        "firestore-send-email": "8a8f55fa6d311a76402ddf342258bd9ffa246f5a67d1cb58186bb956e6c4517b"
+      }
+    }
+  }
+}
