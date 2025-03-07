@@ -16,13 +16,13 @@ const ContactForm = () => {
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAcdpax1Bk5XySYKC4xQ-6u05TnKkoMvEc",
-  authDomain: "bella-bella-realty-website.firebaseapp.com",
-  projectId: "bella-bella-realty-website",
-  storageBucket: "bella-bella-realty-website.appspot.com",
-  messagingSenderId: "256708251300",
-  appId: "1:256708251300:web:b92120f36e9233b43ce031",
-  measurementId: "G-6CSM0W2QH9"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 initializeApp(firebaseConfig);
