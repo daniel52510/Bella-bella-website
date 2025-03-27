@@ -4,6 +4,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 const RecentProperties = () => {
     const firebaseConfig = {
+        //API keys go here!
         apiKey: "",
         authDomain: "",
         projectId: "bella-bella-realty-website",
