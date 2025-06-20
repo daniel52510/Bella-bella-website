@@ -6,7 +6,7 @@ import PropertyTile from '../components/PropertyTile';
 const ListingPage = () => {
 
     const firebaseConfig = {
-        apiKey: "AIzaSyAcdpax1Bk5XySYKC4xQ-6u05TnKkoMvEc",
+        apiKey: "",
         authDomain: "bella-bella-realty-website.firebaseapp.com",
         projectId: "bella-bella-realty-website",
         storageBucket: "bella-bella-realty-website.appspot.com",
